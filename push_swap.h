@@ -41,6 +41,7 @@ char	*ft_strjoin(char *s1, char *s2);
 int     *ft_check_doubles(char **ptr);
 char    **ft_split(char *s, char c);
 char	*ft_strchr(char *s, int c);
+void    free_stack(t_list **stack);
 int		*ft_ascii_toi(char **ptr);
 int  	*ft_check_arg(char **ptr);
 int    	ft_getlen(t_list *stack);
@@ -50,6 +51,7 @@ int     ft_getsize(char **ptr);
 size_t	ft_strlen(char *str);
 int 	ft_division(int nbr);
 char	*ft_strdup(char *s1);
+void	free_ptr(char **ptr);
 int	    ft_atoi(char *str);
 
 /**********    Linked_list    **********/

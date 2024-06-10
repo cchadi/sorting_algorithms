@@ -43,6 +43,7 @@ void    ft_sort_5(t_list **list)
 {
     t_list *stack_b;
 
+    stack_b = NULL;
     get_on_top(list, 5, get_min((*list), 0));
     ft_pb(list, &stack_b);
     get_on_top(list, 4, get_min((*list), 1));

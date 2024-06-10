@@ -11,7 +11,7 @@ SRCS = tools/ft_strjoin.c tools/ft_split.c tools/ft_getarg.c tools/ft_atoi.c    
 		ft_sort/ft_sort_3.c ft_sort/ft_sort_5.c ft_sort/ft_sort.c	\
 		ft_sort/ft_sort_2.c ft_sort/ft_sort_tob.c \
 		ft_sort/ft_return_toa.c tools/ft_atol.c tools/check_if_sorted.c \
-		ft_sort/ft_sort_4.c
+		ft_sort/ft_sort_4.c tools/free_ptr.c tools/free_stack.c \ 
 
 
 OBJS = tools/ft_strjoin.o tools/ft_split.o tools/ft_getarg.o tools/ft_atoi.o       \
@@ -27,11 +27,11 @@ OBJS = tools/ft_strjoin.o tools/ft_split.o tools/ft_getarg.o tools/ft_atoi.o    
 		ft_sort/ft_sort_3.o ft_sort/ft_sort_5.o ft_sort/ft_sort.o		\
 		ft_sort/ft_sort_2.o ft_sort/ft_sort_tob.o \
 		ft_sort/ft_return_toa.o tools/ft_atol.o tools/check_if_sorted.o \
-		ft_sort/ft_sort_4.o
+		ft_sort/ft_sort_4.o tools/free_ptr.o tools/free_stack.o \
 
 
 NAME = push_swap
-CFLAGS = #-Wall -Wextra -Werror #-fsanitize=address -g3
+CFLAGS = -Wall -Wextra -Werror -g #-fsanitize=address -g3
 CC = cc
 
 all : $(NAME)

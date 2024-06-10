@@ -20,8 +20,9 @@ int main(int ac, char **av)
             ft_put_index(&stack_a, arr, ft_getsize(ptr));
             ft_sort(&stack_a, &stack_b, ptr);
         }
-        free(ptr);
+        free_ptr(ptr);
         free(arr);
+        free_stack(&stack_a);
     }
     return (0);
 }
