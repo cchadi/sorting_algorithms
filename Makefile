@@ -11,42 +11,40 @@ SRCS = tools/ft_strjoin.c tools/ft_split.c tools/ft_getarg.c tools/ft_atoi.c    
 		ft_sort/ft_sort_3.c ft_sort/ft_sort_5.c ft_sort/ft_sort.c	\
 		ft_sort/ft_sort_2.c ft_sort/ft_sort_tob.c \
 		ft_sort/ft_return_toa.c tools/ft_atol.c tools/check_if_sorted.c \
-		ft_sort/ft_sort_4.c tools/free_ptr.c tools/free_stack.c \ 
+		ft_sort/ft_sort_4.c tools/free_ptr.c tools/free_stack.c 
+
+BONUS_SRCS = checker/checker.c checker/get_next_line_utils.c checker/get_next_line.c checker/if_sorted_bonus.c \
+		checker/instraction_bonus.c parsing_bonus.c \
+		checker/ft_ra_bonus.c checker/ft_rb_bonus.c checker/ft_rr_bonus.c checker/ft_pa_bonus.c checker/ft_pb_bonus.c \
+		checker/ft_rra_bonus.c ft_rrb_bonus.c ft_rrr_bonus.c \
+		checker/ft_sa_bonus.c checker/ft_sb_bonus.c checker/ft_ss_bonus.c checker/ft_getarg_bonus.c checker/ft_check_arg_bonus.c checker/ft_check_doubles_bonus.c \
+		checker/free_stack_bonus.c checker/linked_list_bonus.h checker/strlen_bonus.c
 
 
-OBJS = tools/ft_strjoin.o tools/ft_split.o tools/ft_getarg.o tools/ft_atoi.o       \
-		tools/ft_ascii_toi.o tools/ft_calloc.o tools/ft_strlen.o tools/ft_strdup.o \
-		tools/ft_substr.o main.o tools/ft_check_arg.o tools/ft_check_doubles.o	\
-		tools/ft_sort_arr.o tools/ft_getsize.o tools/ft_put_index.o	tools/ft_division.o \
-		tools/ft_getlen.o tools/ft_get_on_top.o tools/ft_strtrim.o tools/ft_strchr.o \
-		linked_list/ft_lstadd_back.o linked_list/ft_lstnew.o linked_list/ft_lstlast.o \
-		linked_list/ft_linked_list.o linked_list/ft_lstadd_front.o 					  \
-		moves/ft_sa.o moves/ft_ra.o moves/ft_rb.o moves/ft_pa.o			\
-		moves/ft_sb.o moves/ft_rra.o moves/ft_rrb.o moves/ft_pb.o 		\
-		moves/ft_rr.o moves/ft_rrr.o moves/ft_ss.o \
-		ft_sort/ft_sort_3.o ft_sort/ft_sort_5.o ft_sort/ft_sort.o		\
-		ft_sort/ft_sort_2.o ft_sort/ft_sort_tob.o \
-		ft_sort/ft_return_toa.o tools/ft_atol.o tools/check_if_sorted.o \
-		ft_sort/ft_sort_4.o tools/free_ptr.o tools/free_stack.o \
+OBJS = $(SRCS:.c=.o)
 
+BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 
+bonus = checker
 NAME = push_swap
+
 CFLAGS = -Wall -Wextra -Werror -g #-fsanitize=address -g3
 CC = cc
 
 all : $(NAME)
 
-#bonus : $(BONUS_OBJS)
-#	ar rc $(NAME) $(BONUS_OBJS)
+bonus : $(BONUS_OBJS)
+	$(CC) $(BONUS_OBJS) $(CFLAGS) -o $(BONUS)
 
 $(NAME) : $(OBJS)
 	$(CC) $(OBJS) $(CFLAGS) -o $(NAME)
 
 clean :
 	-rm -f $(OBJS) 
-# $(BONUS_OBJS)
+	-rm -f $(BONUS_OBJS)
 		
 fclean : clean
 	-rm -f $(NAME)
+	-rm -f $(BONUS)
 
 re : fclean	all
