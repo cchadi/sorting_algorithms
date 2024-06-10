@@ -13,12 +13,14 @@ SRCS = tools/ft_strjoin.c tools/ft_split.c tools/ft_getarg.c tools/ft_atoi.c    
 		ft_sort/ft_return_toa.c tools/ft_atol.c tools/check_if_sorted.c \
 		ft_sort/ft_sort_4.c tools/free_ptr.c tools/free_stack.c 
 
-BONUS_SRCS = checker/checker.c checker/get_next_line_utils.c checker/get_next_line.c checker/if_sorted_bonus.c \
-		checker/instraction_bonus.c parsing_bonus.c \
-		checker/ft_ra_bonus.c checker/ft_rb_bonus.c checker/ft_rr_bonus.c checker/ft_pa_bonus.c checker/ft_pb_bonus.c \
-		checker/ft_rra_bonus.c ft_rrb_bonus.c ft_rrr_bonus.c \
-		checker/ft_sa_bonus.c checker/ft_sb_bonus.c checker/ft_ss_bonus.c checker/ft_getarg_bonus.c checker/ft_check_arg_bonus.c checker/ft_check_doubles_bonus.c \
-		checker/free_stack_bonus.c checker/linked_list_bonus.h checker/strlen_bonus.c
+BONUS_SRCS = bonus/checker.c bonus/get_next_line_utils.c bonus/get_next_line.c bonus/if_sorted_bonus.c \
+		bonus/instraction_bonus.c bonus/parsing_bonus.c bonus/ft_ra_bonus.c bonus/ft_rb_bonus.c \
+		bonus/ft_rr_bonus.c bonus/ft_pa_bonus.c bonus/ft_pb_bonus.c bonus/ft_rra_bonus.c bonus/ft_rrb_bonus.c \
+		bonus/ft_rrr_bonus.c bonus/ft_sa_bonus.c bonus/ft_sb_bonus.c bonus/ft_ss_bonus.c bonus/ft_getarg_bonus.c \
+		bonus/ft_check_arg_bonus.c bonus/ft_check_doubles_bonus.c bonus/free_stack_bonus.c \
+		bonus/linked_list_bonus.c bonus/lstadd_back_bonus.c bonus/lstnew_bonus.c bonus/ft_ascii_toi.c \
+		bonus/lstadd_front_bonus.c bonus/ft_lstlast_bonus.c bonus/ft_split.c bonus/ft_substr.c bonus/ft_strtrim.c \
+		bonus/ft_atol.c  bonus/ft_atoi.c bonus/strncmp_bonus.c bonus/free_ptr_bonus.c
 
 
 OBJS = $(SRCS:.c=.o)
@@ -28,13 +30,13 @@ BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 bonus = checker
 NAME = push_swap
 
-CFLAGS = -Wall -Wextra -Werror -g #-fsanitize=address -g3
+CFLAGS = -Wall -Wextra -Werror -g -fsanitize=address -g3
 CC = cc
 
 all : $(NAME)
 
 bonus : $(BONUS_OBJS)
-	$(CC) $(BONUS_OBJS) $(CFLAGS) -o $(BONUS)
+	$(CC) $(BONUS_OBJS) $(CFLAGS) -o $(bonus)
 
 $(NAME) : $(OBJS)
 	$(CC) $(OBJS) $(CFLAGS) -o $(NAME)
@@ -45,6 +47,6 @@ clean :
 		
 fclean : clean
 	-rm -f $(NAME)
-	-rm -f $(BONUS)
+	-rm -f $(bonus)
 
 re : fclean	all
