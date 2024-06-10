@@ -2,9 +2,9 @@
 
 char	*ft_strjoin(char *s1, char *s2)
 {
-	size_t	i;
-	char	*res;
-	char	*q;
+	size_t i;
+	char *res;
+	char *q;
 
 	if (!s1)
 		return (ft_strdup(s2));

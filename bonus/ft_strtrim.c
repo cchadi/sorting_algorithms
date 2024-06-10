@@ -11,9 +11,9 @@ char	*ft_alloc_void(char *str)
 
 char	*ft_strtrim(char *s1, char *set)
 {
-	size_t	i;
-	size_t	len;
-	char	*s;
+	size_t i;
+	size_t len;
+	char *s;
 
 	s = NULL;
 	if (!s1 || !set)
@@ -24,7 +24,7 @@ char	*ft_strtrim(char *s1, char *set)
 	i = 0;
 	len--;
 	while (len && ft_strchr(set, s1[len]))
-			len--;
+		len--;
 	while (s1[i + 1] != '\0' && ft_strchr(set, s1[i]))
 		i++;
 	if (len < i)

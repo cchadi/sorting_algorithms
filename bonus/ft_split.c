@@ -2,8 +2,8 @@
 
 int	ft_count(char *s, char c)
 {
-	int		i;
-	int		count;
+	int	i;
+	int	count;
 
 	i = 0;
 	count = 0;
@@ -20,7 +20,7 @@ int	ft_count(char *s, char c)
 	return (count);
 }
 
-static	char	*ft_copysubstr(char *s, int len, int i)
+static char	*ft_copysubstr(char *s, int len, int i)
 {
 	char	*little;
 	int		j;
@@ -41,10 +41,10 @@ static void	*ft_free_memory(char **ptr, int l)
 {
 	while (l >= 0)
 	{
-		free (ptr[l]);
+		free(ptr[l]);
 		l--;
 	}
-	free (ptr);
+	free(ptr);
 	return (NULL);
 }
 

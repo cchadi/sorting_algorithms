@@ -16,8 +16,8 @@ void	ft_bzero(void *s, size_t n)
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	void	*ptr;
-	size_t	lenght;
+	void *ptr;
+	size_t lenght;
 
 	if (size && count >= SIZE_MAX / size)
 		return (NULL);
@@ -25,6 +25,6 @@ void	*ft_calloc(size_t count, size_t size)
 	ptr = malloc(lenght);
 	if (ptr == NULL)
 		return (0);
-	ft_bzero (ptr, lenght);
+	ft_bzero(ptr, lenght);
 	return (ptr);
 }

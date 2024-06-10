@@ -30,10 +30,10 @@ static int	ft_nbrlen(char *str)
 
 long long	ft_atol(char *str)
 {
-	int					i;
-	int					sign;
+	int			i;
+	int			sign;
 	long long	res;
-	int					m;
+	int			m;
 
 	i = 0;
 	res = 0;

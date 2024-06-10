@@ -2,8 +2,8 @@
 
 char	*ft_strdup(char *s1)
 {
-	char	*ptr;
-	char	*q;
+	char *ptr;
+	char *q;
 
 	ptr = (char *)malloc(ft_strlen(s1) + 1);
 	if (ptr == NULL)

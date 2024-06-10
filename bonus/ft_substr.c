@@ -2,9 +2,9 @@
 
 char	*ft_substr(char *s, unsigned int start, size_t len)
 {
-	char	*str;
-	char	*substr;
-	size_t	i;
+	char *str;
+	char *substr;
+	size_t i;
 
 	if (!s)
 		return (0);

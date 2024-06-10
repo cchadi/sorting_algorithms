@@ -14,7 +14,7 @@ char	*ft_strchr(char *s, int c)
 		else
 			l++;
 	}
-	if (str[l] == (char) c)
+	if (str[l] == (char)c)
 		return (&str[l]);
 	return (NULL);
 }
