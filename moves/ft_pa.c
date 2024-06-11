@@ -1,12 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_pa.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: csaidi <csaidi@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/11 01:00:41 by csaidi            #+#    #+#             */
+/*   Updated: 2024/06/11 01:16:41 by csaidi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../push_swap.h"
 
 void	ft_pa(t_list **stack_a, t_list **stack_b)
 {
+	t_list	*new;
+	t_list	*tmp;
+
 	if (!stack_b || !(*stack_b))
 		return ;
-	t_list *new;
-	t_list *tmp;
-
 	new = ft_lstnew((*stack_b)->data);
 	ft_lstadd_front(stack_a, new);
 	tmp = (*stack_b);

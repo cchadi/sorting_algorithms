@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: csaidi <csaidi@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/11 00:58:30 by csaidi            #+#    #+#             */
+/*   Updated: 2024/06/11 01:24:14 by csaidi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
@@ -26,6 +38,21 @@ typedef struct s_arr
 	int				*arr;
 	int				size;
 }					t_arr;
+
+typedef struct s_var
+{
+	int	*arr;
+	int	l;
+	int	i;
+	int	j;
+}		t_var;
+
+typedef struct s_order
+{
+	int	a;
+	int	b;
+	int	c;
+}		t_order;
 
 /**********    Tools    **********/
 

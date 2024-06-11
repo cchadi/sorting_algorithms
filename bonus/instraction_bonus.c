@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   instraction_bonus.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: csaidi <csaidi@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/11 01:04:53 by csaidi            #+#    #+#             */
+/*   Updated: 2024/06/11 01:13:32 by csaidi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../push_swap_bonus.h"
 
 void	do_instraction(int l, t_list **stack_a, t_list **stack_b)
@@ -51,8 +63,8 @@ char	**get_inst(void)
 
 int	check_instraction(char *str, t_list **stack_a, t_list **stack_b)
 {
-	int l;
-	char **ptr;
+	int		l;
+	char	**ptr;
 
 	ptr = get_inst();
 	l = 0;

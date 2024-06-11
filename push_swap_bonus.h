@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap_bonus.h                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: csaidi <csaidi@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/11 00:58:37 by csaidi            #+#    #+#             */
+/*   Updated: 2024/06/11 02:42:54 by csaidi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PUSH_SWAP_BONUS_H
 # define PUSH_SWAP_BONUS_H
 
@@ -19,6 +31,14 @@ typedef struct s_list
 	int				index;
 	struct s_list	*next;
 }					t_list;
+
+typedef struct s_var
+{
+	int	*arr;
+	int	l;
+	int	i;
+	int	j;
+}		t_var;
 
 int					check_instraction(char *str, t_list **stack_a,
 						t_list **stack_b);

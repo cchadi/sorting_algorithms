@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_sort.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: csaidi <csaidi@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/11 01:02:03 by csaidi            #+#    #+#             */
+/*   Updated: 2024/06/11 01:15:44 by csaidi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../push_swap.h"
 
 int	counter(t_list *list)
@@ -15,12 +27,11 @@ int	counter(t_list *list)
 
 void	ft_sort(t_list **stack_a, t_list **stack_b, char **ptr)
 {
-	t_list *copy;
-	int nodes;
+	t_list	*copy;
+	int		nodes;
 
 	copy = (*stack_a);
 	nodes = counter(copy);
-
 	if (nodes == 2)
 		ft_sort_2(stack_a);
 	else if (nodes == 3)

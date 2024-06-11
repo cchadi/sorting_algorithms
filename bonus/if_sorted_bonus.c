@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   if_sorted_bonus.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: csaidi <csaidi@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/11 01:04:48 by csaidi            #+#    #+#             */
+/*   Updated: 2024/06/11 01:13:15 by csaidi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../push_swap_bonus.h"
 
 int	ft_lstsize(t_list *stack)
@@ -30,10 +42,10 @@ int	sorted(int *arr, int size)
 
 void	if_sorted(t_list *stack_a, t_list *stack_b)
 {
-	t_list *tmp;
-	int size;
-	int *arr;
-	int i;
+	t_list	*tmp;
+	int		size;
+	int		*arr;
+	int		i;
 
 	size = ft_lstsize(stack_a);
 	arr = malloc(size * sizeof(int));

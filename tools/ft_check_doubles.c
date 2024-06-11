@@ -1,16 +1,20 @@
-#include "../push_swap.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_check_doubles.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: csaidi <csaidi@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/11 00:59:22 by csaidi            #+#    #+#             */
+/*   Updated: 2024/06/11 01:23:36 by csaidi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-typedef struct s_var
-{
-	int	*arr;
-	int	l;
-	int	i;
-	int	j;
-}		t_var;
+#include "../push_swap.h"
 
 int	*ft_check_doubles(char **ptr)
 {
-	t_var v;
+	t_var	v;
 
 	v.l = 0;
 	while (ptr[v.l])

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_return_toa.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: csaidi <csaidi@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/11 01:01:43 by csaidi            #+#    #+#             */
+/*   Updated: 2024/06/11 01:14:22 by csaidi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../push_swap.h"
 
 int	ft_get_max(t_list *stack_b, int size)
@@ -19,7 +31,7 @@ int	ft_get_max(t_list *stack_b, int size)
 
 void	ft_return_toa(t_list **stack_a, t_list **stack_b, int size)
 {
-	int p;
+	int	p;
 
 	while (size >= 0)
 	{

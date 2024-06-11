@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_sort_4.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: csaidi <csaidi@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/11 01:01:53 by csaidi            #+#    #+#             */
+/*   Updated: 2024/06/11 01:14:53 by csaidi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../push_swap.h"
 
 int	getmin(t_list *stack, int index)
@@ -41,7 +53,7 @@ void	get_ontop(t_list **stack, int size, int rep)
 
 void	ft_sort_4(t_list **list)
 {
-	t_list *stack_b;
+	t_list	*stack_b;
 
 	stack_b = NULL;
 	get_ontop(list, 4, getmin((*list), 0));

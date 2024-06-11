@@ -1,11 +1,16 @@
-#include "../push_swap.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_sort_3.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: csaidi <csaidi@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/11 01:01:48 by csaidi            #+#    #+#             */
+/*   Updated: 2024/06/11 01:24:18 by csaidi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-typedef struct s_order
-{
-	int	a;
-	int	b;
-	int	c;
-}		t_order;
+#include "../push_swap.h"
 
 t_order	ft_get_order(t_list **list)
 {
@@ -21,9 +26,9 @@ t_order	ft_get_order(t_list **list)
 
 void	ft_sort_3(t_list **list)
 {
-	t_order o;
-	o = ft_get_order(list);
+	t_order	o;
 
+	o = ft_get_order(list);
 	if (o.a > o.b && o.b < o.c && o.a < o.c)
 		ft_sa(list, 1);
 	else if (o.a > o.b && o.b > o.c && o.a > o.c)

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_put_index.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: csaidi <csaidi@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/11 00:59:55 by csaidi            #+#    #+#             */
+/*   Updated: 2024/06/11 01:21:10 by csaidi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../push_swap.h"
 
 void	ft_get_index(t_list *stack_a, int *arr, int size)
@@ -19,7 +31,7 @@ void	ft_get_index(t_list *stack_a, int *arr, int size)
 
 void	ft_put_index(t_list **stack_a, int *arr, int size)
 {
-	t_list *tmp;
+	t_list	*tmp;
 
 	tmp = (*stack_a);
 	while (tmp)

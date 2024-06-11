@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: csaidi <csaidi@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/11 01:00:31 by csaidi            #+#    #+#             */
+/*   Updated: 2024/06/11 01:22:10 by csaidi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../push_swap.h"
 
 char	*ft_alloc_void(char *str)
@@ -11,9 +23,9 @@ char	*ft_alloc_void(char *str)
 
 char	*ft_strtrim(char *s1, char *set)
 {
-	size_t i;
-	size_t len;
-	char *s;
+	size_t	i;
+	size_t	len;
+	char	*s;
 
 	s = NULL;
 	if (!s1 || !set)

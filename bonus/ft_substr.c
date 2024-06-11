@@ -1,10 +1,22 @@
-#include "../push_swap.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: csaidi <csaidi@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/11 01:04:14 by csaidi            #+#    #+#             */
+/*   Updated: 2024/06/11 01:12:32 by csaidi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "../push_swap_bonus.h"
 
 char	*ft_substr(char *s, unsigned int start, size_t len)
 {
-	char *str;
-	char *substr;
-	size_t i;
+	char	*str;
+	char	*substr;
+	size_t	i;
 
 	if (!s)
 		return (0);

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_check_arg_bonus.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: csaidi <csaidi@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/11 01:02:52 by csaidi            #+#    #+#             */
+/*   Updated: 2024/06/11 01:08:08 by csaidi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../push_swap_bonus.h"
 
 int	ft_isdigit(char *str)
@@ -26,7 +38,7 @@ int	ft_isdigit(char *str)
 
 int	*ft_check_arg(char **ptr)
 {
-	int l;
+	int	l;
 
 	if (!ptr)
 		return (NULL);
