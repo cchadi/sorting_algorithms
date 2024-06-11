@@ -6,7 +6,7 @@
 /*   By: csaidi <csaidi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 01:02:52 by csaidi            #+#    #+#             */
-/*   Updated: 2024/06/11 01:08:08 by csaidi           ###   ########.fr       */
+/*   Updated: 2024/06/12 00:12:36 by csaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	ft_isdigit(char *str)
 		else
 			return (-1);
 	}
-	if (ft_atol(str) > INT_MAX || ft_atol(str) < INT_MIN)
+	if (ft_atol(str) == -1)
 		return (-1);
 	return (0);
 }
@@ -41,7 +41,10 @@ int	*ft_check_arg(char **ptr)
 	int	l;
 
 	if (!ptr)
+	{
+		write(1, "Error\n", 6);
 		return (NULL);
+	}
 	l = 0;
 	while (ptr[l])
 	{

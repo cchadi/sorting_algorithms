@@ -18,9 +18,9 @@ BONUS_SRCS = bonus/checker.c bonus/get_next_line_utils.c bonus/get_next_line.c b
 		bonus/ft_rr_bonus.c bonus/ft_pa_bonus.c bonus/ft_pb_bonus.c bonus/ft_rra_bonus.c bonus/ft_rrb_bonus.c \
 		bonus/ft_rrr_bonus.c bonus/ft_sa_bonus.c bonus/ft_sb_bonus.c bonus/ft_ss_bonus.c bonus/ft_getarg_bonus.c \
 		bonus/ft_check_arg_bonus.c bonus/ft_check_doubles_bonus.c bonus/free_stack_bonus.c \
-		bonus/linked_list_bonus.c bonus/lstadd_back_bonus.c bonus/lstnew_bonus.c bonus/ft_ascii_toi.c \
-		bonus/lstadd_front_bonus.c bonus/ft_lstlast_bonus.c bonus/ft_split.c bonus/ft_substr.c bonus/ft_strtrim.c \
-		bonus/ft_atol.c  bonus/ft_atoi.c bonus/strncmp_bonus.c bonus/free_ptr_bonus.c
+		bonus/linked_list_bonus.c bonus/lstadd_back_bonus.c bonus/lstnew_bonus.c bonus/ft_ascii_toi_bonus.c \
+		bonus/lstadd_front_bonus.c bonus/ft_lstlast_bonus.c bonus/ft_split_bonus.c bonus/ft_substr.c bonus/ft_strtrim.c \
+		bonus/ft_atol_bonus.c  bonus/ft_atoi_bonus.c bonus/strncmp_bonus.c bonus/free_ptr_bonus.c
 
 
 OBJS = $(SRCS:.c=.o)

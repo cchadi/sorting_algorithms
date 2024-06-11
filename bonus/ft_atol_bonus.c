@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_atol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: csaidi <csaidi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/11 01:02:40 by csaidi            #+#    #+#             */
-/*   Updated: 2024/06/11 01:02:41 by csaidi           ###   ########.fr       */
+/*   Created: 2024/06/11 01:02:49 by csaidi            #+#    #+#             */
+/*   Updated: 2024/06/12 00:20:59 by csaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,12 +40,12 @@ static int	ft_nbrlen(char *str)
 	return (len);
 }
 
-int	ft_atoi(char *str)
+long long	ft_atol(char *str)
 {
-	int					i;
-	int					sign;
-	unsigned long long	res;
-	int					m;
+	int			i;
+	int			sign;
+	long long	res;
+	int			m;
 
 	i = 0;
 	res = 0;
@@ -59,10 +59,8 @@ int	ft_atoi(char *str)
 	{
 		res *= 10;
 		res += str[i++] - '0';
+		if (res > INT_MAX || res < INT_MIN)
+			return (-1);
 	}
-	if ((m >= 20 || res > LLONG_MAX) && sign == -1)
-		return (0);
-	if ((m >= 20 || res > LLONG_MAX) && sign == 1)
-		return (-1);
-	return (res * sign);
+	return (0);
 }

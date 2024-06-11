@@ -6,7 +6,7 @@
 /*   By: csaidi <csaidi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 00:59:11 by csaidi            #+#    #+#             */
-/*   Updated: 2024/06/11 00:59:12 by csaidi           ###   ########.fr       */
+/*   Updated: 2024/06/12 00:23:53 by csaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,8 @@ long long	ft_atol(char *str)
 	{
 		res *= 10;
 		res += str[i++] - '0';
+		if (res > INT_MAX || res < INT_MIN)
+			return (-1);
 	}
-	return (res * sign);
+	return (0);
 }

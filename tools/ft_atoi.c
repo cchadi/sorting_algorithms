@@ -6,7 +6,7 @@
 /*   By: csaidi <csaidi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 00:59:08 by csaidi            #+#    #+#             */
-/*   Updated: 2024/06/11 00:59:09 by csaidi           ###   ########.fr       */
+/*   Updated: 2024/06/11 23:46:54 by csaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,9 +60,7 @@ int	ft_atoi(char *str)
 		res *= 10;
 		res += str[i++] - '0';
 	}
-	if ((m >= 20 || res > LLONG_MAX) && sign == -1)
-		return (0);
-	if ((m >= 20 || res > LLONG_MAX) && sign == 1)
+	if ((m >= 20 || res > LLONG_MAX))
 		return (-1);
 	return (res * sign);
 }
